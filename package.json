@@ -1,0 +1,28 @@
+{
+  "name": "google-cloud-intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc",
+    "watch": "npm run clean && concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
+    "start": "node ./dist/index.js",
+    "gcp-build": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.11",
+    "express": "^4.18.2",
+    "typescript": "^5.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "rimraf": "^4.4.1",
+    "concurrently": "^8.0.1"
+  }
+}
